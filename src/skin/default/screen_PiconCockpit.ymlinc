@@ -13,6 +13,7 @@ screen:
         size: "280,168"
         zPosition: "2"
     - widget:
+        backgroundColorSelected: "$backgroundColorSelected"
         font: "$FR_verysmall"
         itemHeight: "30"
         position: "20,65"
