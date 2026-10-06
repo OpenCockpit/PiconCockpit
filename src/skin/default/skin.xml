@@ -25,12 +25,12 @@
 		</widget>
 		<eLabel backgroundColor="separator" position="0,664" size="1280,2"/>
 		<eLabel backgroundColor="backgroundDark" position="0,665" size="1280,55"/>
-		<widget conditional="key_red" font="Regular;32" foregroundColor="red" halign="center" name="key_red" position="0,672" size="275,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_green" font="Regular;32" foregroundColor="green" halign="center" name="key_green" position="275,672" size="275,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_yellow" font="Regular;32" foregroundColor="yellow" halign="center" name="key_yellow" position="550,672" size="275,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_blue" font="Regular;32" foregroundColor="blue" halign="center" name="key_blue" position="825,672" size="275,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_menu" font="Regular;32" foregroundColor="white" halign="center" name="key_menu" position="1100,672" size="90,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_info" font="Regular;32" foregroundColor="white" halign="center" name="key_info" position="1190,672" size="90,38" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_red" font="Regular;32" foregroundColor="red" halign="center" name="key_red" position="0,665" size="275,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_green" font="Regular;32" foregroundColor="green" halign="center" name="key_green" position="275,665" size="275,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_yellow" font="Regular;32" foregroundColor="yellow" halign="center" name="key_yellow" position="550,665" size="275,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_blue" font="Regular;32" foregroundColor="blue" halign="center" name="key_blue" position="825,665" size="275,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_menu" font="Regular;32" foregroundColor="white" halign="center" name="key_menu" position="1100,665" size="90,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_info" font="Regular;32" foregroundColor="white" halign="center" name="key_info" position="1190,665" size="90,55" transparent="1" valign="center" zPosition="2"/>
 	</screen>
 	<screen backgroundColor="backgroundMedium" flags="wfNoBorder" name="PiconDownloadProgress" position="center,center" resolution="1920,1080" size="900,330">
 		<eLabel backgroundColor="backgroundDark" position="0,0" size="900,55"/>
@@ -42,11 +42,11 @@
 		<widget font="Regular;32" halign="left" name="status" position="10,210" size="e-20,40" transparent="1" valign="center"/>
 		<eLabel backgroundColor="separator" position="0,274" size="900,2"/>
 		<eLabel backgroundColor="backgroundDark" position="0,275" size="900,55"/>
-		<widget conditional="key_red" font="Regular;32" foregroundColor="red" halign="center" name="key_red" position="0,282" size="180,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_green" font="Regular;32" foregroundColor="green" halign="center" name="key_green" position="180,282" size="180,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_yellow" font="Regular;32" foregroundColor="yellow" halign="center" name="key_yellow" position="360,282" size="180,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_blue" font="Regular;32" foregroundColor="blue" halign="center" name="key_blue" position="540,282" size="180,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_menu" font="Regular;32" foregroundColor="white" halign="center" name="key_menu" position="720,282" size="90,38" transparent="1" valign="center" zPosition="2"/>
-		<widget conditional="key_info" font="Regular;32" foregroundColor="white" halign="center" name="key_info" position="810,282" size="90,38" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_red" font="Regular;32" foregroundColor="red" halign="center" name="key_red" position="0,275" size="180,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_green" font="Regular;32" foregroundColor="green" halign="center" name="key_green" position="180,275" size="180,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_yellow" font="Regular;32" foregroundColor="yellow" halign="center" name="key_yellow" position="360,275" size="180,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_blue" font="Regular;32" foregroundColor="blue" halign="center" name="key_blue" position="540,275" size="180,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_menu" font="Regular;32" foregroundColor="white" halign="center" name="key_menu" position="720,275" size="90,55" transparent="1" valign="center" zPosition="2"/>
+		<widget conditional="key_info" font="Regular;32" foregroundColor="white" halign="center" name="key_info" position="810,275" size="90,55" transparent="1" valign="center" zPosition="2"/>
 	</screen>
 </skin>
