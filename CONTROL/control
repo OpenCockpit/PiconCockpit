@@ -2,3 +2,4 @@ Description: PiconCockpit
 Maintainer: xcentaurix
 Package: enigma2-plugin-extensions-piconcockpit
 Architecture: all
+Depends: enigma2-plugin-systemskins-fontcockpit
