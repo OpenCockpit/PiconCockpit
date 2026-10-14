@@ -12,3 +12,4 @@ PiconCockpit is a plugin for Open Enigma2 receivers that downloads picons from a
 
 ## Links
 - Installation: https://OpenCockpit.github.io/PiconCockpit
+- User Guide: https://github.com/OpenCockpit/PiconCockpit/wiki
