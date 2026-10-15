@@ -331,6 +331,11 @@ class PiconCockpit(Screen):
             logger.warning("startPiconDownload: No picons to download")
             return
 
+        if config.plugins.piconcockpit.delete_before_download.value:
+            # only now that there is something to download: a failed or empty list must not leave an empty folder
+            logger.info("Deleting the picons in %s", self.picon_dir)
+            deleteFiles(os.path.join(self.picon_dir, "*.png"))
+
         # Start the picon download progress screen with correct parameters
         # picon_set[1] is the dir_url from our data structure
         self.session.open(
@@ -339,28 +344,6 @@ class PiconCockpit(Screen):
             picons,         # picons list
             self.picon_dir  # picon_dir
         )
-
-    def downloadAllPiconsCallback(self, answer):
-        """Handle callback for downloading all picons"""
-        logger.info("...")
-        if answer:
-            try:
-                # Read all picons from list file
-                picons = readFile(os.path.join(self.picon_dir, picon_list_file)).splitlines()
-                if picons:
-                    picon_set = self["list"].getCurrent()
-                    if picon_set:
-                        if config.plugins.piconcockpit.delete_before_download.value:
-                            deleteFiles(os.path.join(self.picon_dir, "*.png"))
-                        self.session.open(PiconDownloadProgress,
-                                          picon_set[1], picons, self.picon_dir)
-                    else:
-                        self.showErrorMessage(_("No picon set selected"))
-                else:
-                    self.showErrorMessage(_("No picons available for download"))
-            except Exception as e:
-                logger.error("Error in downloadAllPiconsCallback: %s", e)
-                self.showErrorMessage(_("Error reading picon list"))
 
     def createList(self, fill):
         logger.info("...")
