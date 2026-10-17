@@ -1,7 +1,7 @@
 screen:
   name: "PiconCockpit"
   position: "center,center"
-  size: "1280,720"
+  size: "1416,858"
   children:
     - xmlinc:
         file: "screenpart_TitleBar.ymlinc"
@@ -19,20 +19,20 @@ screen:
         position: "20,65"
         render: "Listbox"
         scrollbarMode: "showOnDemand"
-        size: "e-340,570"
+        size: "e-340,e-150"
         source: "list"
         children:
           - convert:
-              type: "TemplatedMultiContentEx"
+              type: "COCTemplatedMultiContentEx"
               cell:
-                itemHeight: 30
+                itemHeight: 45
                 fonts:
-                  - "$md_label_medium"
+                  - "$md_body_medium"
                 fields:
                   - text:
                       position: "10,0"
-                      size: "e-20,30"
-                      font: "$md_label_medium"
+                      size: "e-20,45"
+                      font: "$md_body_medium"
                       flags: RT_HALIGN_LEFT|RT_VALIGN_CENTER
                       value: 0
     - xmlinc:
