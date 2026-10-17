@@ -6,7 +6,7 @@ screen:
     - xmlinc:
         file: "screenpart_TitleBar.ymlinc"
     - widget:
-        font: "$list_font"
+        font: "$md_body_large"
         halign: "left"
         name: "operation"
         position: "10,65"
@@ -18,7 +18,7 @@ screen:
         position: "10,120"
         size: "e-20,20"
     - widget:
-        font: "$list_font"
+        font: "$md_body_large"
         halign: "left"
         name: "name"
         position: "10,155"
@@ -26,7 +26,7 @@ screen:
         transparent: "1"
         valign: "center"
     - widget:
-        font: "$list_font"
+        font: "$md_body_large"
         halign: "left"
         name: "status"
         position: "10,210"
