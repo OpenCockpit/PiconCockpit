@@ -149,3 +149,6 @@ msgstr ""
 
 msgid "of"
 msgstr ""
+
+msgid "Menu"
+msgstr ""

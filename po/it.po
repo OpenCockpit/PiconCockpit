@@ -149,3 +149,6 @@ msgstr "Elaborazione"
 
 msgid "of"
 msgstr "di"
+
+msgid "Menu"
+msgstr "Menu"
