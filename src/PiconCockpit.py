@@ -11,6 +11,7 @@ from Screens.MessageBox import MessageBox
 from Components.Pixmap import Pixmap
 from Components.ActionMap import ActionMap
 from Components.Button import Button
+from Components.Sources.StaticText import StaticText
 from Components.Sources.List import List
 from Components.config import config, configfile
 from Tools.LoadPixmap import LoadPixmap
@@ -55,7 +56,8 @@ class PiconCockpit(Screen):
         self["preview"] = Pixmap()
         self["key_green"] = Button(_("Download"))
         self["key_red"] = Button(_("Exit"))
-        self["key_menu"] = Button(_("Menu"))
+        # the buttons bar shows an action key only if its source has a true boolean: StaticText with text, not Button
+        self["key_menu"] = StaticText(_("MENU"))
         self.first_start = True
         self.onLayoutFinish.append(self.__onLayoutFinish)
         self.onClose.append(self.__onClose)
