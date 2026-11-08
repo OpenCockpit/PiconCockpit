@@ -1,0 +1,5 @@
+# The row height of the lists. A list is a whole number of rows high: size="$width,13*$list_item_height", not a number of pixels.
+# list_item_height: the row (a line of text and its padding).
+- global:
+    name: "list_item_height"
+    value: "45"

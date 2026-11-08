@@ -1,0 +1,30 @@
+- widget:
+    alphatest: "blend"
+    name: "preview"
+    position: "$width-280,0"
+    scale: "1"
+    size: "280,168"
+    zPosition: "2"
+- widget:
+    backgroundColorSelected: "$backgroundColorSelected"
+    foregroundColorSelected: "$foregroundColorSelected"
+    itemCornerRadiusSelected: "$radius_item"
+    position: "0,0"
+    render: "Listbox"
+    scrollbarMode: "showOnDemand"
+    size: "$width-280-20,eval($height/$list_item_height*$list_item_height)"
+    source: "list"
+    children:
+      - convert:
+          type: "COCTemplatedMultiContentEx"
+          cell:
+            itemHeight: $list_item_height
+            fonts:
+              - "$md_body_medium"
+            fields:
+              - text:
+                  position: "10,0"
+                  size: "e-20,45"
+                  font: "$md_body_medium"
+                  flags: RT_HALIGN_LEFT|RT_VALIGN_CENTER
+                  value: 0

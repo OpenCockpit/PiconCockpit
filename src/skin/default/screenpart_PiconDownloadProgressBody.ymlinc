@@ -1,0 +1,28 @@
+- widget:
+    font: "$md_body_large"
+    halign: "left"
+    name: "operation"
+    position: "0,0"
+    size: "$width,40"
+    transparent: "1"
+    valign: "center"
+- widget:
+    name: "slider1"
+    position: "0,52"
+    size: "$width,20"
+- widget:
+    font: "$md_body_large"
+    halign: "left"
+    name: "name"
+    position: "0,86"
+    size: "$width,40"
+    transparent: "1"
+    valign: "center"
+- widget:
+    font: "$md_body_large"
+    halign: "left"
+    name: "status"
+    position: "0,$height-40"
+    size: "$width,40"
+    transparent: "1"
+    valign: "center"

@@ -1,0 +1,8 @@
+skin:
+  children:
+    - xmlinc:
+        file: "globals.ymlinc"
+    - xmlinc:
+        file: "screen_PiconCockpit.ymlinc"
+    - xmlinc:
+        file: "screen_PiconDownloadProgress.ymlinc"
