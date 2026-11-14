@@ -7,9 +7,13 @@
     transparent: "1"
     valign: "center"
 - widget:
+    backgroundColor: "md_surface_container"
+    cornerRadius: "$radius_bar_thick"
+    foregroundColor: "md_primary"
     name: "slider1"
     position: "0,52"
     size: "$width,20"
+    transparent: "0"
 - widget:
     font: "$md_body_large"
     halign: "left"
