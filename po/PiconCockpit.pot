@@ -152,3 +152,6 @@ msgstr ""
 
 msgid "Menu"
 msgstr ""
+
+msgid "Continue in background"
+msgstr ""
