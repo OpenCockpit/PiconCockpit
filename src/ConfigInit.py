@@ -2,7 +2,7 @@
 # License: GNU General Public License v3.0
 
 
-from Components.config import config, ConfigText, ConfigYesNo, ConfigSelection, ConfigSubsection, ConfigNothing, NoSave
+from Components.config import config, ConfigDirectory, ConfigText, ConfigYesNo, ConfigSelection, ConfigSubsection, ConfigNothing, NoSave
 from .Debug import logger
 
 
@@ -30,8 +30,7 @@ config.plugins.piconcockpit.fake_entry = NoSave(ConfigNothing())
 # Server and directory settings
 config.plugins.piconcockpit.picon_server = ConfigSelection(
     default=server_choices[0][0], choices=server_choices)
-config.plugins.piconcockpit.picon_directory = ConfigText(
-    default="/usr/share/enigma2/picon", fixed_size=False, visible_width=50)
+config.plugins.piconcockpit.picon_directory = ConfigDirectory(default="/usr/share/enigma2/picon", visible_width=50)
 
 # Download behavior settings
 config.plugins.piconcockpit.all_picons = ConfigYesNo(default=False)
