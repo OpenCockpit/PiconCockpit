@@ -30,6 +30,36 @@ picon_info_file = "picon_info.txt"
 picon_list_file = "zz_picon_list.txt"
 
 
+SYSTEM_PICON_DIR = "/usr/share/enigma2/picon"
+
+
+def findPiconDirectory():
+    """The picon folder enigma2 knows (the picon folders of the mounted partitions, see PiconLocator in
+    Components/Renderer/Picon.py): the first writable one that is not the system folder (which is on the flash). None if there
+    is none. The same rule as for the picons of the other Cockpit plugins (Common/PiconFetcher)."""
+    try:
+        from Components.Renderer.Picon import piconLocator
+        search_paths = piconLocator.searchPaths
+    except (ImportError, AttributeError):
+        return None
+    for path in search_paths:
+        if path != SYSTEM_PICON_DIR and os.path.isdir(path) and os.access(path, os.W_OK):
+            return path
+    return None
+
+
+def adoptPiconDirectory():
+    """The picon directory of the setup is still the default: use the picon directory that exists on a mounted drive."""
+    picon_directory = config.plugins.piconcockpit.picon_directory
+    if picon_directory.value == picon_directory.default:
+        path = findPiconDirectory()
+        if path:
+            logger.info("existing picon directory: %s", path)
+            picon_directory.value = path
+            picon_directory.save()
+            configfile.save()
+
+
 class PiconCockpit(Screen):
 
     def __init__(self, session):
@@ -68,6 +98,7 @@ class PiconCockpit(Screen):
 
     def __onLayoutFinish(self):
         logger.info("...")
+        adoptPiconDirectory()
         self.picon_dir = config.plugins.piconcockpit.picon_directory.value
         if not os.path.exists(self.picon_dir):
             createDirectory(self.picon_dir)

@@ -48,7 +48,13 @@ class SetupScreen(Setup):
     def keySave(self):
         path = os.path.normpath(config.plugins.piconcockpit.picon_directory.value)
         if not os.path.exists(path):
-            logger.error("Path does not exist: %s", path)
+            # the directory is created, so that it can be used right away (enigma2 only looks for picons in an existing one)
+            try:
+                os.makedirs(path)
+                logger.info("created: %s", path)
+            except OSError as e:
+                logger.error("Path does not exist and cannot be created: %s, %s", path, str(e))
+        if not os.path.isdir(path):
             self.session.open(MessageBox, _("Path does not exist") + ": " + path, MessageBox.TYPE_ERROR)
             return
         self._applyLogLevel()
