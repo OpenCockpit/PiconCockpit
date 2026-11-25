@@ -10,7 +10,6 @@ from .Debug import logger
 from .__init__ import _
 from .FileProgress import FileProgress
 from .DelayTimer import DelayTimer
-from .ServiceUtils import announcePiconDirectory
 
 
 class PiconDownloadProgress(FileProgress):
@@ -24,14 +23,9 @@ class PiconDownloadProgress(FileProgress):
         FileProgress.__init__(self, session)
         self.setTitle(_("Picon Download") + " ...")
         self.onShow.append(self.onDialogShow)
-        self.onClose.append(self.__onClose)
         self.total_files = 0
         self.execution_list = self.picons
         self.status = _("Initializing") + " ..."
-
-    def __onClose(self):
-        # also when cancelled: the picons downloaded so far are there
-        announcePiconDirectory(self.picon_dir)
 
     def onDialogShow(self):
         logger.info("...")
